@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A-L Grading & Excavating</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/lucide-static@0.321.0/font/lucide.min.css" rel="stylesheet">
+    <style>
+        .lucide {
+            width: 1em;
+            height: 1em;
+            stroke-width: 1.5;
+            stroke: currentColor;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-white">
+    <!-- Top Bar -->
+    <div class="bg-black text-white py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <span>TRUCKING</span>
+                <span>MATERIALS</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="tel:(555)202-7396" class="hover:text-red-500 transition-colors">
+                    <i class="lucide lucide-phone inline mr-2"></i>
+                    (555) 202-7396
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <h1 class="text-2xl font-bold text-red-600">A-L Grading</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-700 hover:text-red-600 transition duration-300">COMMERCIAL</a>
+                <a href="#" class="text-gray-700 hover:text-red-600 transition duration-300">RESIDENTIAL</a>
+                <a href="#" class="text-gray-700 hover:text-red-600 transition duration-300">SERVICE AREA</a>
+                <a href="#" class="text-gray-700 hover:text-red-600 transition duration-300">CONTACT US</a>
+            </nav>
+            <button 
+                id="mobileMenuButton"
+                class="md:hidden text-gray-700 hover:text-red-600 transition duration-300"
+            >
+                <i class="lucide lucide-menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden bg-white shadow-lg absolute top-[108px] right-0 left-0 z-40 hidden">
+        <nav class="flex flex-col p-4">
+            <a href="#" class="py-2 text-gray-700 hover:text-red-600 transition duration-300 flex items-center">
+                <i class="lucide lucide-chevron-right mr-2"></i> COMMERCIAL
+            </a>
+            <a href="#" class="py-2 text-gray-700 hover:text-red-600 transition duration-300 flex items-center">
+                <i class="lucide lucide-chevron-right mr-2"></i> RESIDENTIAL
+            </a>
+            <a href="#" class="py-2 text-gray-700 hover:text-red-600 transition duration-300 flex items-center">
+                <i class="lucide lucide-chevron-right mr-2"></i> SERVICE AREA
+            </a>
+            <a href="#" class="py-2 text-gray-700 hover:text-red-600 transition duration-300 flex items-center">
+                <i class="lucide lucide-chevron-right mr-2"></i> CONTACT US
+            </a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-[600px]">
+        <div 
+            class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('/placeholder.svg?height=1080&width=1920');"
+        >
+            <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        </div>
+        <div class="relative h-full container mx-auto px-4 flex items-center">
+            <div class="max-w-2xl text-white">
+                <h2 class="text-5xl font-bold mb-6">Welcome to A-L Grading & Excavating</h2>
+                <p class="text-xl mb-8">Professional grading and excavation services for commercial and residential projects</p>
+                <button 
+                    class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-none text-lg"
+                >
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <i class="lucide lucide-building-2 w-12 h-12 text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Commercial</h3>
+                    <p class="text-gray-600 mb-4">From sitework to utilities</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Site Preparation</li>
+                        <li>• Utility Installation</li>
+                        <li>• Parking Lot Grading</li>
+                        <li>• Storm Water Management</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <i class="lucide lucide-home w-12 h-12 text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Residential</h3>
+                    <p class="text-gray-600 mb-4">Clearing & grading to excavation</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Land Clearing</li>
+                        <li>• Foundation Excavation</li>
+                        <li>• Driveway Grading</li>
+                        <li>• Landscape Grading</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <i class="lucide lucide-truck w-12 h-12 text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Hauling</h3>
+                    <p class="text-gray-600 mb-4">Trucking & hauling services</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Material Delivery</li>
+                        <li>• Debris Removal</li>
+                        <li>• Equipment Transport</li>
+                        <li>• Bulk Material Hauling</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <i class="lucide lucide-shovel w-12 h-12 text-red-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Materials</h3>
+                    <p class="text-gray-600 mb-4">From sand & gravel to stone & mulch</p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li>• Topsoil</li>
+                        <li>• Gravel</li>
+                        <li>• Crushed Stone</li>
+                        <li>• Fill Dirt</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-8">Get a Quote For Your Project</h2>
+            <p class="text-xl text-gray-600 mb-8">No project too big or too small - we're here to help!</p>
+            <button 
+                class="bg-red-600 hover:bg-red-700 text-white px-12 py-6 rounded-none text-xl"
+            >
+                FREE QUOTE
+            </button>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Recent Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="group relative overflow-hidden">
+                    <img
+                        src="/placeholder.svg?height=400&width=600"
+                        alt="Project 1"
+                        class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">View Project</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden">
+                    <img
+                        src="/placeholder.svg?height=400&width=600"
+                        alt="Project 2"
+                        class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">View Project</span>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden">
+                    <img
+                        src="/placeholder.svg?height=400&width=600"
+                        alt="Project 3"
+                        class="w-full h-[300px] object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="text-white text-xl font-bold">View Project</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+                    <p class="text-gray-600 mb-8">
+                        Ready to start your project? Contact us today for a free consultation and quote.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="lucide lucide-phone w-6 h-6 text-red-600 mr-4"></i>
+                            <span>(555) 202-7396</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="lucide lucide-mail w-6 h-6 text-red-600 mr-4"></i>
+                            <span>info@algrading.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="lucide lucide-map-pin w-6 h-6 text-red-600 mr-4"></i>
+                            <span>123 Construction Ave, Builder City, ST 12345</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-100 p-8">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <input
+                                type="text"
+                                placeholder="First Name"
+                                class="w-full px-4 py-2 border border-gray-300 focus:border-red-600 outline-none"
+                            />
+                            <input
+                                type="text"
+                                placeholder="Last Name"
+                                class="w-full px-4 py-2 border border-gray-300 focus:border-red-600 outline-none"
+                            />
+                        </div>
+                        <input
+                            type="email"
+                            placeholder="Email"
+                            class="w-full px-4 py-2 border border-gray-300 focus:border-red-600 outline-none"
+                        />
+                        <input
+                            type="tel"
+                            placeholder="Phone"
+                            class="w-full px-4 py-2 border border-gray-300 focus:border-red-600 outline-none"
+                        />
+                        <textarea
+                            placeholder="Message"
+                            rows="4"
+                            class="w-full px-4 py-2 border border-gray-300 focus:border-red-600 outline-none"
+                        ></textarea>
+                        <button 
+                            class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-none"
+                        >
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">A-L Grading</h3>
+                    <p class="text-gray-400">
+                        Professional grading and excavation services for all your construction needs.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Commercial</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Residential</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Service Area</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="text-l font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="lucide lucide-phone w-4 h-4 mr-2"></i>
+                            <span>(555) 202-7396</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="lucide lucide-mail w-4 h-4 mr-2"></i>
+                            <span>info@algrading.com</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="lucide lucide-map-pin w-4 h-4 mr-2"></i>
+                            <span>123 Construction Ave, Builder City, ST 12345</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+            <p>&copy; 2024 A-L Grading & Excavating. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Fixed Contact Button -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <button 
+            class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full shadow-lg text-lg flex items-center gap-2"
+        >
+            <i class="lucide lucide-phone w-5 h-5"></i>
+            Call Now
+        </button>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let mobileMenuOpen = false;
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenuOpen = !mobileMenuOpen;
+            if (mobileMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuButton.innerHTML = '<i class="lucide lucide-x"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.innerHTML = '<i class="lucide lucide-menu"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
